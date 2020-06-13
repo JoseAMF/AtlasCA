@@ -1,8 +1,11 @@
+﻿using Atlas.Application.Common.Mappings;
 using System;
+using System.Collections.Generic;
+using System.Text;
 
-namespace Atlas.Domain.Entities.eCommerce
+namespace Atlas.Application.eCommerce.Bilhete
 {
-    public class Bilhete
+    public class BilheteDTO : IMapFrom<Domain.Entities.eCommerce.Bilhete>
     {
         public string NrVoucher { get; set; }
         public string Nome { get; set; }
@@ -27,6 +30,5 @@ namespace Atlas.Domain.Entities.eCommerce
         public double? ValorDolar { get; set; }
         public string FormaPgto { get; set; }
         public DateTime? DtCancelamento { get; set; }
-
     }
 }

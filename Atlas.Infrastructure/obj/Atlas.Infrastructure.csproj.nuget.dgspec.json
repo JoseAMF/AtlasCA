@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\JoseA\\Documents\\CleanArchitecture\\Atlas\\Atlas.Infrastructure\\Atlas.Infrastructure.csproj": {}
+    "C:\\Users\\eu\\source\\repos\\AtlasCA\\Atlas.Infrastructure\\Atlas.Infrastructure.csproj": {}
   },
   "projects": {
-    "C:\\Users\\JoseA\\Documents\\CleanArchitecture\\Atlas\\Atlas.Application\\Atlas.Application.csproj": {
+    "C:\\Users\\eu\\source\\repos\\AtlasCA\\Atlas.Application\\Atlas.Application.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\JoseA\\Documents\\CleanArchitecture\\Atlas\\Atlas.Application\\Atlas.Application.csproj",
+        "projectUniqueName": "C:\\Users\\eu\\source\\repos\\AtlasCA\\Atlas.Application\\Atlas.Application.csproj",
         "projectName": "Atlas.Application",
-        "projectPath": "C:\\Users\\JoseA\\Documents\\CleanArchitecture\\Atlas\\Atlas.Application\\Atlas.Application.csproj",
-        "packagesPath": "C:\\Users\\JoseA\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\JoseA\\Documents\\CleanArchitecture\\Atlas\\Atlas.Application\\obj\\",
+        "projectPath": "C:\\Users\\eu\\source\\repos\\AtlasCA\\Atlas.Application\\Atlas.Application.csproj",
+        "packagesPath": "C:\\Users\\eu\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\eu\\source\\repos\\AtlasCA\\Atlas.Application\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\JoseA\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\eu\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -27,8 +27,8 @@
         "frameworks": {
           "netcoreapp3.1": {
             "projectReferences": {
-              "C:\\Users\\JoseA\\Documents\\CleanArchitecture\\Atlas\\Atlas.Domain\\Atlas.Domain.csproj": {
-                "projectPath": "C:\\Users\\JoseA\\Documents\\CleanArchitecture\\Atlas\\Atlas.Domain\\Atlas.Domain.csproj"
+              "C:\\Users\\eu\\source\\repos\\AtlasCA\\Atlas.Domain\\Atlas.Domain.csproj": {
+                "projectPath": "C:\\Users\\eu\\source\\repos\\AtlasCA\\Atlas.Domain\\Atlas.Domain.csproj"
               }
             }
           }
@@ -98,21 +98,21 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.101\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.301\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Users\\JoseA\\Documents\\CleanArchitecture\\Atlas\\Atlas.Domain\\Atlas.Domain.csproj": {
+    "C:\\Users\\eu\\source\\repos\\AtlasCA\\Atlas.Domain\\Atlas.Domain.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\JoseA\\Documents\\CleanArchitecture\\Atlas\\Atlas.Domain\\Atlas.Domain.csproj",
+        "projectUniqueName": "C:\\Users\\eu\\source\\repos\\AtlasCA\\Atlas.Domain\\Atlas.Domain.csproj",
         "projectName": "Atlas.Domain",
-        "projectPath": "C:\\Users\\JoseA\\Documents\\CleanArchitecture\\Atlas\\Atlas.Domain\\Atlas.Domain.csproj",
-        "packagesPath": "C:\\Users\\JoseA\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\JoseA\\Documents\\CleanArchitecture\\Atlas\\Atlas.Domain\\obj\\",
+        "projectPath": "C:\\Users\\eu\\source\\repos\\AtlasCA\\Atlas.Domain\\Atlas.Domain.csproj",
+        "packagesPath": "C:\\Users\\eu\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\eu\\source\\repos\\AtlasCA\\Atlas.Domain\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\JoseA\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\eu\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -150,21 +150,21 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.101\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.301\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Users\\JoseA\\Documents\\CleanArchitecture\\Atlas\\Atlas.Infrastructure\\Atlas.Infrastructure.csproj": {
+    "C:\\Users\\eu\\source\\repos\\AtlasCA\\Atlas.Infrastructure\\Atlas.Infrastructure.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\JoseA\\Documents\\CleanArchitecture\\Atlas\\Atlas.Infrastructure\\Atlas.Infrastructure.csproj",
+        "projectUniqueName": "C:\\Users\\eu\\source\\repos\\AtlasCA\\Atlas.Infrastructure\\Atlas.Infrastructure.csproj",
         "projectName": "Atlas.Infrastructure",
-        "projectPath": "C:\\Users\\JoseA\\Documents\\CleanArchitecture\\Atlas\\Atlas.Infrastructure\\Atlas.Infrastructure.csproj",
-        "packagesPath": "C:\\Users\\JoseA\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\JoseA\\Documents\\CleanArchitecture\\Atlas\\Atlas.Infrastructure\\obj\\",
+        "projectPath": "C:\\Users\\eu\\source\\repos\\AtlasCA\\Atlas.Infrastructure\\Atlas.Infrastructure.csproj",
+        "packagesPath": "C:\\Users\\eu\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\eu\\source\\repos\\AtlasCA\\Atlas.Infrastructure\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\JoseA\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\eu\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -177,11 +177,11 @@
         "frameworks": {
           "netcoreapp3.1": {
             "projectReferences": {
-              "C:\\Users\\JoseA\\Documents\\CleanArchitecture\\Atlas\\Atlas.Application\\Atlas.Application.csproj": {
-                "projectPath": "C:\\Users\\JoseA\\Documents\\CleanArchitecture\\Atlas\\Atlas.Application\\Atlas.Application.csproj"
+              "C:\\Users\\eu\\source\\repos\\AtlasCA\\Atlas.Application\\Atlas.Application.csproj": {
+                "projectPath": "C:\\Users\\eu\\source\\repos\\AtlasCA\\Atlas.Application\\Atlas.Application.csproj"
               },
-              "C:\\Users\\JoseA\\Documents\\CleanArchitecture\\Atlas\\Atlas.Domain\\Atlas.Domain.csproj": {
-                "projectPath": "C:\\Users\\JoseA\\Documents\\CleanArchitecture\\Atlas\\Atlas.Domain\\Atlas.Domain.csproj"
+              "C:\\Users\\eu\\source\\repos\\AtlasCA\\Atlas.Domain\\Atlas.Domain.csproj": {
+                "projectPath": "C:\\Users\\eu\\source\\repos\\AtlasCA\\Atlas.Domain\\Atlas.Domain.csproj"
               }
             }
           }
@@ -236,7 +236,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.101\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.301\\RuntimeIdentifierGraph.json"
         }
       }
     }
