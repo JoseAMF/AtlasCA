@@ -1,6 +1,6 @@
 using System;
 
-namespace Atlas.Models.PRE_OS_AMIBR
+namespace Atlas.Domain.Entities.eCommerce
 {
     public class Bilhete
     {
