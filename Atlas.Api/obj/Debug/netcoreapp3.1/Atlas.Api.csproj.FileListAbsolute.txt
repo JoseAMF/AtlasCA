@@ -117,3 +117,15 @@ C:\Users\JoseA\Documents\CleanArchitecture\Atlas\Atlas.Api\bin\Debug\netcoreapp3
 C:\Users\JoseA\Documents\CleanArchitecture\Atlas\Atlas.Api\bin\Debug\netcoreapp3.1\Serilog.Sinks.Loki.dll
 C:\Users\JoseA\Documents\CleanArchitecture\Atlas\Atlas.Api\bin\Debug\netcoreapp3.1\Serilog.Sinks.RollingFile.dll
 C:\Users\JoseA\Documents\CleanArchitecture\Atlas\Atlas.Api\bin\Debug\netcoreapp3.1\Connected Services\Atlas.Api.ServiceReference.MotorRegras\ConnectedService.json
+C:\Users\JoseA\Documents\CleanArchitecture\Atlas\Atlas.Api\bin\Debug\netcoreapp3.1\System.Net.Http.WinHttpHandler.dll
+C:\Users\JoseA\Documents\CleanArchitecture\Atlas\Atlas.Api\bin\Debug\netcoreapp3.1\System.ServiceModel.Duplex.dll
+C:\Users\JoseA\Documents\CleanArchitecture\Atlas\Atlas.Api\bin\Debug\netcoreapp3.1\System.ServiceModel.Http.dll
+C:\Users\JoseA\Documents\CleanArchitecture\Atlas\Atlas.Api\bin\Debug\netcoreapp3.1\System.ServiceModel.NetTcp.dll
+C:\Users\JoseA\Documents\CleanArchitecture\Atlas\Atlas.Api\bin\Debug\netcoreapp3.1\System.ServiceModel.Primitives.dll
+C:\Users\JoseA\Documents\CleanArchitecture\Atlas\Atlas.Api\bin\Debug\netcoreapp3.1\System.ServiceModel.dll
+C:\Users\JoseA\Documents\CleanArchitecture\Atlas\Atlas.Api\bin\Debug\netcoreapp3.1\System.ServiceModel.Security.dll
+C:\Users\JoseA\Documents\CleanArchitecture\Atlas\Atlas.Api\bin\Debug\netcoreapp3.1\runtimes\win\lib\netstandard2.0\System.Net.Http.WinHttpHandler.dll
+C:\Users\JoseA\Documents\CleanArchitecture\Atlas\Atlas.Api\bin\Debug\netcoreapp3.1\runtimes\unix\lib\netstandard2.0\System.Private.ServiceModel.dll
+C:\Users\JoseA\Documents\CleanArchitecture\Atlas\Atlas.Api\bin\Debug\netcoreapp3.1\runtimes\win7\lib\netstandard2.0\System.Private.ServiceModel.dll
+C:\Users\JoseA\Documents\CleanArchitecture\Atlas\Atlas.Api\obj\Debug\netcoreapp3.1\Atlas.Api.MvcApplicationPartsAssemblyInfo.cs
+C:\Users\JoseA\Documents\CleanArchitecture\Atlas\Atlas.Api\obj\Debug\netcoreapp3.1\Atlas.Api.MvcApplicationPartsAssemblyInfo.cache

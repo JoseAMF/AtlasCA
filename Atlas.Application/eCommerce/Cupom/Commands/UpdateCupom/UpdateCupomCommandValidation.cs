@@ -11,14 +11,14 @@ using System.Threading.Tasks;
 
 namespace Atlas.Application.eCommerce.Cupom.Commands
 {
-    public class AtualizaCupomCommandValidation : AbstractValidator<AtualizaCupomCommand>
+    public class UpdateCupomCommandValidation : AbstractValidator<CreateCupomCommand>
     {
         private readonly IRuleEngineService ruleEngineService;
         private IeCommerceDbContextService _contextservice { get; }
 
         private string ErrorMessage = "Error";
 
-        public AtualizaCupomCommandValidation(IeCommerceDbContextService contextservice, IRuleEngineService ruleEngineService)
+        public UpdateCupomCommandValidation(IeCommerceDbContextService contextservice, IRuleEngineService ruleEngineService)
         {
             _contextservice = contextservice;
             this.ruleEngineService = ruleEngineService;
@@ -27,7 +27,16 @@ namespace Atlas.Application.eCommerce.Cupom.Commands
 
             RuleFor(c => c.Cupom.CodigoCupon)
                 .MinimumLength(6);
-            
+
+            RuleFor(c => c.Cupom.CouponTypeId)
+                .NotEmpty();
+
+            RuleFor(c => c.Cupom.Bonificacion)
+                .NotEmpty();
+
+            RuleFor(c => c.Cupom.FechaInicioVigencia)
+                .NotEmpty();
+
             RuleFor(c => c)
                 .MustAsync(ValidateDuplicates).WithMessage("Este cupom já está ativo");
 
@@ -36,7 +45,7 @@ namespace Atlas.Application.eCommerce.Cupom.Commands
                 
         }
 
-        private async Task<bool> ValidateDuplicates(AtualizaCupomCommand cupom, CancellationToken cancellationToken)
+        private async Task<bool> ValidateDuplicates(CreateCupomCommand cupom, CancellationToken cancellationToken)
         {
             var context = _contextservice.GetContextInitials(cupom.Ambiente);
 
@@ -53,14 +62,26 @@ namespace Atlas.Application.eCommerce.Cupom.Commands
             return true;
         }
 
-        private async Task<bool> ValidateComission(AtualizaCupomCommand cupom, CancellationToken cancellationToken)
+        private async Task<bool> ValidateComission(CreateCupomCommand cupom, CancellationToken cancellationToken)
         {
-            var result = await ruleEngineService.ValidateAgencyComission(cupom.CNPJ, cupom.Cupom.Bonificacion.ToString());
-            if(!String.IsNullOrEmpty(result) )
+            if (cupom.Cupom.CouponTypeId == 2)
             {
-                ErrorMessage = result;
-                return false;
+                var result = await ruleEngineService.ValidateAgencyComission(cupom.CNPJ, cupom.Cupom.Bonificacion.ToString());
+                if (!String.IsNullOrEmpty(result))
+                {
+                    ErrorMessage = result;
+                    return false;
+                }
             }
+            else
+            {
+                if (cupom.Cupom.Bonificacion > 60)
+                {
+                    ErrorMessage = "Desconto em prêmio não pode ser superior a 60% para esta modalidade.";
+                    return false;
+                }
+            }
+
             return true;
         }
 

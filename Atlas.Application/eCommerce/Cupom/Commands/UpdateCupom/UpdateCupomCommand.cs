@@ -11,14 +11,14 @@ using System.Threading.Tasks;
 
 namespace Atlas.Application.eCommerce.Cupom.Commands
 {
-    public class AtualizaCupomCommand : IRequest
+    public class CreateCupomCommand : IRequest
     {
         public string Ambiente { get; set; }
         public string CNPJ { get; set; }
         public PrPromocionCuponesDTO Cupom { get; set; }
     }
 
-    public class AtualizaCupomCommandHandler : IRequestHandler<AtualizaCupomCommand>
+    public class AtualizaCupomCommandHandler : IRequestHandler<CreateCupomCommand>
     {
         private readonly IeCommerceDbContextService _contextService;
         private readonly IMapper _mapper;
@@ -29,7 +29,7 @@ namespace Atlas.Application.eCommerce.Cupom.Commands
             _mapper = mapper;
         }
 
-        public async Task<Unit> Handle(AtualizaCupomCommand request, CancellationToken cancellationToken)
+        public async Task<Unit> Handle(CreateCupomCommand request, CancellationToken cancellationToken)
         {
             var context = _contextService.GetContextInitials(request.Ambiente);
 

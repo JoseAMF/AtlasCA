@@ -16,6 +16,7 @@
           "MediatR": "8.0.1",
           "MediatR.Extensions.Microsoft.DependencyInjection": "8.0.0",
           "Microsoft.EntityFrameworkCore": "3.1.1",
+          "Microsoft.EntityFrameworkCore.Relational": "3.1.1",
           "Microsoft.IdentityModel.Tokens": "6.6.0",
           "System.IdentityModel.Tokens.Jwt": "6.6.0"
         },
@@ -136,6 +137,17 @@
         }
       },
       "Microsoft.EntityFrameworkCore.Analyzers/3.1.1": {},
+      "Microsoft.EntityFrameworkCore.Relational/3.1.1": {
+        "dependencies": {
+          "Microsoft.EntityFrameworkCore": "3.1.1"
+        },
+        "runtime": {
+          "lib/netstandard2.0/Microsoft.EntityFrameworkCore.Relational.dll": {
+            "assemblyVersion": "3.1.1.0",
+            "fileVersion": "3.100.119.61403"
+          }
+        }
+      },
       "Microsoft.Extensions.Caching.Abstractions/3.1.1": {
         "dependencies": {
           "Microsoft.Extensions.Primitives": "3.1.1"
@@ -462,6 +474,13 @@
       "sha512": "sha512-PrB8QZih5QMRhVjXZnwpFtgm14KU2M0ewilUIQ6W/qS7ugFBSlr1vaug2XnSdd2ODyZioc7Yypp4WNfaBIQg5Q==",
       "path": "microsoft.entityframeworkcore.analyzers/3.1.1",
       "hashPath": "microsoft.entityframeworkcore.analyzers.3.1.1.nupkg.sha512"
+    },
+    "Microsoft.EntityFrameworkCore.Relational/3.1.1": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-iBt59oeV97kqI6ZkdSpnUV1cC+hCGf5xqot331waiF5d5sxksLJZghkUZOLpe4yuPg3mnngXD6bPqMsLa4II5g==",
+      "path": "microsoft.entityframeworkcore.relational/3.1.1",
+      "hashPath": "microsoft.entityframeworkcore.relational.3.1.1.nupkg.sha512"
     },
     "Microsoft.Extensions.Caching.Abstractions/3.1.1": {
       "type": "package",
