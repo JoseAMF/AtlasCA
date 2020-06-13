@@ -1,0 +1,11 @@
+C:\Users\JoseA\Documents\CleanArchitecture\Atlas\Atlas.Application\bin\Debug\netcoreapp3.1\Atlas.Application.deps.json
+C:\Users\JoseA\Documents\CleanArchitecture\Atlas\Atlas.Application\bin\Debug\netcoreapp3.1\Atlas.Application.dll
+C:\Users\JoseA\Documents\CleanArchitecture\Atlas\Atlas.Application\bin\Debug\netcoreapp3.1\Atlas.Application.pdb
+C:\Users\JoseA\Documents\CleanArchitecture\Atlas\Atlas.Application\obj\Debug\netcoreapp3.1\Atlas.Application.csprojAssemblyReference.cache
+C:\Users\JoseA\Documents\CleanArchitecture\Atlas\Atlas.Application\obj\Debug\netcoreapp3.1\Atlas.Application.AssemblyInfoInputs.cache
+C:\Users\JoseA\Documents\CleanArchitecture\Atlas\Atlas.Application\obj\Debug\netcoreapp3.1\Atlas.Application.AssemblyInfo.cs
+C:\Users\JoseA\Documents\CleanArchitecture\Atlas\Atlas.Application\obj\Debug\netcoreapp3.1\Atlas.Application.dll
+C:\Users\JoseA\Documents\CleanArchitecture\Atlas\Atlas.Application\obj\Debug\netcoreapp3.1\Atlas.Application.pdb
+C:\Users\JoseA\Documents\CleanArchitecture\Atlas\Atlas.Application\bin\Debug\netcoreapp3.1\Atlas.Domain.dll
+C:\Users\JoseA\Documents\CleanArchitecture\Atlas\Atlas.Application\bin\Debug\netcoreapp3.1\Atlas.Domain.pdb
+C:\Users\JoseA\Documents\CleanArchitecture\Atlas\Atlas.Application\obj\Debug\netcoreapp3.1\Atlas.Application.csproj.CopyComplete
