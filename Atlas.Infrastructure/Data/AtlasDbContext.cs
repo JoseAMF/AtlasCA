@@ -1,6 +1,7 @@
 ﻿using Atlas.Application.Common.Interfaces;
 using Atlas.Domain.Common;
 using Atlas.Domain.Entities.Atlas;
+using Atlas.Domain.Entities.Atlas.Ouvidoria;
 using Atlas.Domain.Entities.Enums;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.ChangeTracking;
@@ -23,6 +24,11 @@ namespace Atlas.Infrastructure.Data
         public DbSet<User> Usuarios { get ; set ; }
         public DbSet<Permission> Permissoes { get ; set ; }
         public DbSet<UserPermission> UsuariosPermissoes { get; set; }
+        public DbSet<Assunto> Ouvidoria_Assuntos { get; set; }
+        public DbSet<CanalReclamacao> Ouvidoria_CanaisReclamacoes { get; set; }
+        public DbSet<CanalVenda> Ouvidoria_CanaisVenda { get; set; }
+        public DbSet<Motivo> Ouvidoria_Motivos { get; set; }
+        public DbSet<Status> Ouvidoria_Status { get; set; }
 
 
         public override Task<int> SaveChangesAsync(CancellationToken cancellationToken = new CancellationToken())

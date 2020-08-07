@@ -17,6 +17,7 @@ namespace Atlas.Infrastructure.Data.Configurations
                 .HasOne(up => up.User)
                 .WithMany(u => u.UserPermissions)
                 .HasForeignKey(up => up.UserUsername);
+
             builder
                 .HasOne(up => up.Permission)
                 .WithMany(p => p.UserPermissions)

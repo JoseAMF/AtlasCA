@@ -1,8 +1,4 @@
 ﻿using MediatR;
-using System;
-using System.Collections.Generic;
-using System.Text;
-using Atlas.Domain.Entities.eCommerce;
 using System.Threading.Tasks;
 using System.Threading;
 using Atlas.Application.Common.Interfaces;

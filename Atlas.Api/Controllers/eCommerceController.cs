@@ -46,13 +46,6 @@ namespace Atlas.Api.Controllers
 
         [HttpPut("Cupom")]
         [Authorize(Roles = "Cupom_Leitura, Cupom_escrita, Cupom_Admin")]
-        public async Task<ActionResult> UpdateCupom(AtualizaCupomCommand command)
-        {
-            return Ok(await Mediator.Send(command));
-        }
-
-        [HttpPut("Cupom")]
-        [Authorize(Roles = "Cupom_Leitura, Cupom_escrita, Cupom_Admin")]
         public async Task<ActionResult> UpdateCupom(CreateCupomCommand command)
         {
             return Ok(await Mediator.Send(command));
