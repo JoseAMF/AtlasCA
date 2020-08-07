@@ -6,9 +6,9 @@ using System.Text;
 
 namespace Atlas.Application.Common.Interfaces
 {
-    interface IContactCenterDbContext
+    public interface IContactCenterDbContext
     {
-        DbSet<VwOuvidoria> VwOuvidoria { get; set; }
+        DbSet<VwOuvidoria> VwOuvidoria { get; set; } 
 
     }
 }

@@ -2911,10 +2911,7 @@
         },
         "runtime": {
           "bin/placeholder/Atlas.Infrastructure.dll": {}
-        },
-        "frameworkReferences": [
-          "Microsoft.AspNetCore.App"
-        ]
+        }
       }
     }
   },
@@ -9134,11 +9131,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\JoseA\\Documents\\CleanArchitecture\\Atlas\\Atlas.Api\\Atlas.Api.csproj",
+      "projectUniqueName": "C:\\Users\\JoseA\\Documents\\GitHub\\AtlasCA\\Atlas.Api\\Atlas.Api.csproj",
       "projectName": "Atlas.Api",
-      "projectPath": "C:\\Users\\JoseA\\Documents\\CleanArchitecture\\Atlas\\Atlas.Api\\Atlas.Api.csproj",
+      "projectPath": "C:\\Users\\JoseA\\Documents\\GitHub\\AtlasCA\\Atlas.Api\\Atlas.Api.csproj",
       "packagesPath": "C:\\Users\\JoseA\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\JoseA\\Documents\\CleanArchitecture\\Atlas\\Atlas.Api\\obj\\",
+      "outputPath": "C:\\Users\\JoseA\\Documents\\GitHub\\AtlasCA\\Atlas.Api\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\JoseA\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -9154,11 +9151,11 @@
       "frameworks": {
         "netcoreapp3.1": {
           "projectReferences": {
-            "C:\\Users\\JoseA\\Documents\\CleanArchitecture\\Atlas\\Atlas.Application\\Atlas.Application.csproj": {
-              "projectPath": "C:\\Users\\JoseA\\Documents\\CleanArchitecture\\Atlas\\Atlas.Application\\Atlas.Application.csproj"
+            "C:\\Users\\JoseA\\Documents\\GitHub\\AtlasCA\\Atlas.Application\\Atlas.Application.csproj": {
+              "projectPath": "C:\\Users\\JoseA\\Documents\\GitHub\\AtlasCA\\Atlas.Application\\Atlas.Application.csproj"
             },
-            "C:\\Users\\JoseA\\Documents\\CleanArchitecture\\Atlas\\Atlas.Infrastructure\\Atlas.Infrastructure.csproj": {
-              "projectPath": "C:\\Users\\JoseA\\Documents\\CleanArchitecture\\Atlas\\Atlas.Infrastructure\\Atlas.Infrastructure.csproj"
+            "C:\\Users\\JoseA\\Documents\\GitHub\\AtlasCA\\Atlas.Infrastructure\\Atlas.Infrastructure.csproj": {
+              "projectPath": "C:\\Users\\JoseA\\Documents\\GitHub\\AtlasCA\\Atlas.Infrastructure\\Atlas.Infrastructure.csproj"
             }
           }
         }
@@ -9261,7 +9258,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.101\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.400\\RuntimeIdentifierGraph.json"
       }
     }
   }

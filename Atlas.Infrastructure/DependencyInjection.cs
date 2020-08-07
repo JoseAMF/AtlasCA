@@ -14,6 +14,8 @@ namespace Atlas.Infrastructure
             //Mapeia a implementação a interface
             services.AddScoped<IAtlasDbContext>(provider => provider.GetService<AtlasDbContext>());
             services.AddScoped<IeCommerceDbContext>(provider => provider.GetService<eCommerceDbContext>());
+            services.AddScoped<II4ProDbContext>(provider => provider.GetService<I4ProDbContext>());
+            services.AddScoped<IPremiumDbContext>(provider => provider.GetService<PremiumDbContext>());
 
             services.AddScoped<IeCommerceDbContextService, eCommerceDbContextService>();
 

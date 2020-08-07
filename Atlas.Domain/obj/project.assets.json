@@ -13,11 +13,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\JoseA\\Documents\\CleanArchitecture\\Atlas\\Atlas.Domain\\Atlas.Domain.csproj",
+      "projectUniqueName": "C:\\Users\\JoseA\\Documents\\GitHub\\AtlasCA\\Atlas.Domain\\Atlas.Domain.csproj",
       "projectName": "Atlas.Domain",
-      "projectPath": "C:\\Users\\JoseA\\Documents\\CleanArchitecture\\Atlas\\Atlas.Domain\\Atlas.Domain.csproj",
+      "projectPath": "C:\\Users\\JoseA\\Documents\\GitHub\\AtlasCA\\Atlas.Domain\\Atlas.Domain.csproj",
       "packagesPath": "C:\\Users\\JoseA\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\JoseA\\Documents\\CleanArchitecture\\Atlas\\Atlas.Domain\\obj\\",
+      "outputPath": "C:\\Users\\JoseA\\Documents\\GitHub\\AtlasCA\\Atlas.Domain\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\JoseA\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -58,7 +58,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.101\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.400\\RuntimeIdentifierGraph.json"
       }
     }
   }

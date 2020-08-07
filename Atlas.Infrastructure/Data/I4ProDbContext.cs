@@ -6,13 +6,13 @@ using Microsoft.EntityFrameworkCore.Metadata;
 
 namespace Atlas.Infrastructure.Data
 {
-   public partial class I4ProContext : DbContext, II4ProDbContext
+   public partial class I4ProDbContext : DbContext, II4ProDbContext
     {
-        public I4ProContext()
+        public I4ProDbContext()
         {
         }
 
-        public I4ProContext(DbContextOptions<I4ProContext> options)
+        public I4ProDbContext(DbContextOptions<I4ProDbContext> options)
             : base(options)
         {
             this.Database.SetCommandTimeout(300);
