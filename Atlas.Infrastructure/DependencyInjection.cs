@@ -16,6 +16,7 @@ namespace Atlas.Infrastructure
             services.AddScoped<IeCommerceDbContext>(provider => provider.GetService<eCommerceDbContext>());
             services.AddScoped<II4ProDbContext>(provider => provider.GetService<I4ProDbContext>());
             services.AddScoped<IPremiumDbContext>(provider => provider.GetService<PremiumDbContext>());
+            services.AddScoped<IContactCenterDbContext>(provider => provider.GetService<ContactCenterDbContext>());
 
             services.AddScoped<IeCommerceDbContextService, eCommerceDbContextService>();
 
