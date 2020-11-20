@@ -11,10 +11,7 @@ namespace Atlas.Infrastructure.Data.Configurations
     {
         public void Configure(EntityTypeBuilder<Assunto> builder)
         {
-            builder.HasKey(a => a.IdAssunto);
-
-            builder.Property(a => a.IdAssunto)
-                .ValueGeneratedNever();
+            builder.HasKey(a => a.Id);
 
             builder.Property(a => a.Descricao)
                 .HasMaxLength(50);

@@ -2,6 +2,7 @@
 using Atlas.Domain.Entities.eCommerce;
 using AutoMapper;
 using MediatR;
+using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -36,17 +37,18 @@ namespace Atlas.Application.eCommerce.CadastroDePessoa.Commands
 
             int IdPersona = context.PoBeneficiariosPoliza.Where(x => x.IdPoliza == IdPoliza).Select(x => x.IdPersona).FirstOrDefault();
 
-            var pePersonaFisica = mapper.Map<PePersonaFisica>(request.Person);
-            context.PePersonaFisica.Update(pePersonaFisica);
-            if (pePersonaFisica.PeDocumentosPersonaFisica.Any())
+            //ToDo Massive work 
+            if (request.Person.PeDocumentosPersonaFisica.Any())
             {
-                context.PeDocumentosPersonaFisica.Update(pePersonaFisica.PeDocumentosPersonaFisica.ToArray()[0]);
+                var peDocumentosPersonaFisica = await context.PeDocumentosPersonaFisica.Where(p => p.IdPersona == request.Person.IdPersona).FirstOrDefaultAsync();
+                    mapper.Map<PeDocumentosPersonaFisica, PeDocumentosPersonaFisica>(request.Person.PeDocumentosPersonaFisica.ToArray()[0], peDocumentosPersonaFisica);
             }
-            if (pePersonaFisica.PeDomiciliosPersona.Any())
-            {
-                context.PeDomiciliosPersona.UpdateRange(pePersonaFisica.PeDomiciliosPersona.ToArray());
+            //if (request.Person.PeDomiciliosPersona.Any())
+            //{
+            //    var peDocumentosPersonaFisica = await context.PeDocumentosPersonaFisica.Where(p => p.IdPersona == request.Person.IdPersona).FirstOrDefaultAsync();
+            //    context.PeDomiciliosPersona.UpdateRange(pePersonaFisica.PeDomiciliosPersona.ToArray());
 
-            }
+            //}
 
             await context.SaveChangesAsync(cancellationToken);
 

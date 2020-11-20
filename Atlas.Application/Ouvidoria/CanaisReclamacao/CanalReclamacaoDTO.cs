@@ -8,6 +8,7 @@ namespace Atlas.Application.Ouvidoria.Assuntos.Commands.CanaisReclamacao
 {
     public class CanalReclamacaoDTO : IMapFrom<CanalReclamacao>
     {
+        public int? Id { get; set; }
         public int IdCanalReclamacao { get; set; }
         public string Descricao { get; set; }
     }

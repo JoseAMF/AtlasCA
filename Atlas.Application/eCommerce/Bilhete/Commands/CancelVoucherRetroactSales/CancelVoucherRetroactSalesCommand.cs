@@ -48,13 +48,9 @@ namespace Atlas.Application.eCommerce.Bilhete.CancelVoucherRetroactSales
             foreach(var bilhete in bilhetes)
             {
                 bilhete.FechaAnulacion = dataCancelamento;
-                context.PoBeneficiariosPoliza.Update(bilhete);
             }
 
             poliza.FechaAnulacion = dataCancelamento;
-
-
-            context.PoPolizas.Update(poliza);
 
             await context.SaveChangesAsync(cancellationToken);
 

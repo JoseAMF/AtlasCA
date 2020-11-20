@@ -1,14 +1,12 @@
 ﻿using Atlas.Application.Common.Interfaces;
 using Atlas.Domain.Common;
 using Atlas.Domain.Entities.Atlas;
+using Atlas.Domain.Entities.Atlas.LGPD;
 using Atlas.Domain.Entities.Atlas.Ouvidoria;
-using Atlas.Domain.Entities.Enums;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.ChangeTracking;
 using System;
-using System.Collections.Generic;
 using System.Reflection;
-using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
 
@@ -29,7 +27,7 @@ namespace Atlas.Infrastructure.Data
         public DbSet<CanalVenda> Ouvidoria_CanaisVenda { get; set; }
         public DbSet<Motivo> Ouvidoria_Motivos { get; set; }
         public DbSet<Status> Ouvidoria_Status { get; set; }
-
+        public DbSet<LGPDExterno> LGPDExternos { get; set; }
 
         public override Task<int> SaveChangesAsync(CancellationToken cancellationToken = new CancellationToken())
         {

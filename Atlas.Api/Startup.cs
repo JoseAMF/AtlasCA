@@ -15,6 +15,8 @@ using NSwag.Generation.Processors.Security;
 using Atlas.Application.Common.Interfaces;
 using Atlas.Api.Services;
 using Microsoft.AspNetCore.Http;
+using Atlas.Api.Middleware;
+using Serilog;
 
 namespace Atlas.Api
 {
@@ -57,6 +59,8 @@ namespace Atlas.Api
                 options.Filters.Add(new ApiExceptionFilter()));
 
             services.AddApplication();
+
+
             services.AddSingleton<IHttpContextAccessor, HttpContextAccessor>();
             //Services
             services.AddScoped<ICurrentUserService, CurrentUserService>();
@@ -90,11 +94,14 @@ namespace Atlas.Api
                 app.UseDeveloperExceptionPage();
             }
 
+            //app.UseSerilogRequestLogging();
+
+            //app.UseRequestResponseLogging();
+
             app.UseOpenApi();
 
             app.UseSwaggerUi3();
 
-            app.UseHttpsRedirection();
 
             app.UseRouting();
 

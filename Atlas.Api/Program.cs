@@ -21,14 +21,14 @@ namespace Atlas.Api
             //    .Build();
 
 
-            //var credentials = new NoAuthCredentials("http://loki:3100"); // Address to local or remote Loki server
+            var credentials = new NoAuthCredentials("http://localhost:3100"); // Address to local or remote Loki server
 
-            //Log.Logger = new LoggerConfiguration()
-            //        .MinimumLevel.Information()
-            //        .Enrich.FromLogContext()
-            //        .WriteTo.LokiHttp(credentials)
-            //        .WriteTo.Console()
-            //        .CreateLogger();
+            Log.Logger = new LoggerConfiguration()
+                    .MinimumLevel.Information()
+                    .Enrich.FromLogContext()
+                    .WriteTo.LokiHttp(credentials)
+                    .WriteTo.Console()
+                    .CreateLogger();
 
             CreateHostBuilder(args).Build().Run();
         }
@@ -38,6 +38,6 @@ namespace Atlas.Api
             .ConfigureWebHostDefaults(webBuilder =>
             {
                 webBuilder.UseStartup<Startup>();
-            });
+            }).UseSerilog();
     }
 }

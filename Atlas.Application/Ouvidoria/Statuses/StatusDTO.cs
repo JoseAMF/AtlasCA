@@ -8,6 +8,7 @@ namespace Atlas.Application.Ouvidoria.Statuses
 {
     public class StatusDTO : IMapFrom<Status>
     {
+        public int Id{ get; set; }
         public int IdStatus { get; set; }
         public string Descricao { get; set; }
     }

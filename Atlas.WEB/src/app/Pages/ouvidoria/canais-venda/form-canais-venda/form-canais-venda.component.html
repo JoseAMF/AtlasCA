@@ -1,0 +1,35 @@
+<app-header [title]="'Ouvidoria - Canais de Venda'"></app-header>
+
+<app-loading-spinner [isLoading]="isLoading"></app-loading-spinner>
+
+<div class="container" *ngIf="!isLoading">
+  <app-bread-crumb
+  [items]="[{text: 'Canal de Venda', link: '../'}, {text: pageTitle}]"
+></app-bread-crumb>
+  <app-form-field-alerts [errorList]="serverErrorMessages"></app-form-field-alerts>
+  <form [formGroup]="resourceForm" (submit)="submitForm()">
+    <div class="card">
+      <div class="card-header">
+        Informações sobre o Canal de Venda:
+      </div>
+
+      <div class="card-body">
+        <div class="form-row">
+          <mat-form-field class="col-md-4">
+            <input matInput type="number" placeholder="Id Canal de Venda" id="idCanalVenda" formControlName="idCanalVenda"/>
+          </mat-form-field>
+          <mat-form-field class="col-md-8">
+            <input matInput placeholder="Descrição" id="descricao" formControlName="descricao"/>
+          </mat-form-field>
+        </div>
+      </div>
+    </div>
+    <button mat-raised-button [disabled]="resourceForm.invalid" type="submit" class="float-right mt-3">
+      Salvar
+    </button>
+    <button mat-raised-button (click)="navigateBack()" class="float-right mt-3 mr-3">
+      Voltar
+    </button>
+  </form>
+</div>
+

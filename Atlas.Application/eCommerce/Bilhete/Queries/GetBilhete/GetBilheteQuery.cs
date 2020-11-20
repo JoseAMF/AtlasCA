@@ -73,7 +73,7 @@ namespace Atlas.Application.eCommerce.Bilhete.Queries.GetBilhete
             .Select(x => x.DescripcionFormaPagoBs)
             .FirstOrDefault();
             bilhete.Valor = poBeneficiariosPoliza.Importe;
-            bilhete.ValorDolar = context.BsMonedasCotizaciones.Where(x => x.FechaCotizacion.CompareTo(bilhete.Emissao) == 0).Select(x => x.Importe).FirstOrDefault();
+            bilhete.ValorDolar = context.BsMonedasCotizaciones.Where(x => x.FechaCotizacion.CompareTo(bilhete.Emissao.Date) == 0).Select(x => x.Importe).FirstOrDefault();
             bilhete.Agencia = pePersonaJuridica.RazonSocial;
             bilhete.Cupom = poliza.CodigoCupon;
             bilhete.Produto = context.PrProducto.Where(x => x.IdProducto == poliza.IdProducto).Select(x => x.DenominacionProducto).FirstOrDefault();

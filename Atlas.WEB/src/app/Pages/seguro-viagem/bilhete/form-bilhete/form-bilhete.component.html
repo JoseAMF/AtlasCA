@@ -1,0 +1,120 @@
+<app-header [title]="'Seguro Viagem - Bilhete'"></app-header>
+
+<div class="bilheteForm" style="padding: 3vw;" *ngIf="!isLoading && !bilhete">
+  <p style="text-align: center;">Bilhete não encontrado</p>
+  <button style="text-align: center;" mat-raised-button [routerLink]="['../']"
+    routerLinkActive="router-link-active">Voltar</button>
+</div>
+
+<app-loading-spinner [isLoading]="isLoading"></app-loading-spinner>
+
+
+
+<div class="container" *ngIf="!isLoading && !!bilhete">
+
+<app-form-field-alerts [errorList] = "error"></app-form-field-alerts>
+
+<div class="input-group">
+  <button [routerLink]="['../']" routerLinkActive="router-link-active" mat-raised-button>Pesquisar outro bilhete</button>
+  <button class="ml-3" mat-raised-button [hidden]="!canCancel()" [routerLink]="['Cancelamento']" routerLinkActive="router-link-active" >Cancelar Bilhete</button>
+  <button class="ml-3" mat-raised-button (click)="openPDF()" >Abrir PDF</button>
+</div>
+
+  <fieldset class="mt-5">
+    <legend>Bilhete</legend>
+    <div class="row bordered">
+      <div class="row ml-3">
+        <div class="col-md">
+          <mat-form-field>
+            <input matInput placeholder="Nome" [(ngModel)]="bilhete.nome" readonly />
+          </mat-form-field>
+
+          <mat-form-field>
+            <input matInput placeholder="CPF" [(ngModel)]="bilhete.cpf" readonly />
+          </mat-form-field>
+
+          <mat-form-field>
+            <input matInput placeholder="Telefone" [(ngModel)]="bilhete.telefone" readonly />
+          </mat-form-field>
+
+          <mat-form-field>
+            <input matInput placeholder="Celular" [(ngModel)]="bilhete.celular" readonly />
+          </mat-form-field>
+
+          <mat-form-field>
+            <input matInput placeholder="Email" [(ngModel)]="bilhete.email" readonly />
+          </mat-form-field>
+
+          <mat-form-field>
+            <input matInput placeholder="Data de Nascimento" [(ngModel)]="bilhete.dtNascimento" readonly />
+          </mat-form-field>
+
+          <mat-form-field>
+            <input matInput placeholder="Sexo" [(ngModel)]="bilhete.sexo" readonly />
+          </mat-form-field>
+        </div>
+
+        <div class="col-md">
+          <mat-form-field>
+            <input matInput placeholder="Contato de Emergência" [(ngModel)]="bilhete.contatoEmergencia" readonly />
+          </mat-form-field>
+
+          <mat-form-field>
+            <input matInput placeholder="Telefone de Emergência" [(ngModel)]="bilhete.contatoEmergenciaTelefone" readonly />
+          </mat-form-field>
+
+          <mat-form-field>
+            <input matInput placeholder="Agência" [(ngModel)]="bilhete.agencia" readonly />
+          </mat-form-field>
+
+          <mat-form-field>
+            <input matInput placeholder="Seller Id" [(ngModel)]="bilhete.sellerID" readonly />
+          </mat-form-field>
+
+          <mat-form-field>
+            <input matInput placeholder="Segmento" [(ngModel)]="bilhete.segmento" readonly />
+          </mat-form-field>
+
+          <mat-form-field>
+            <input matInput placeholder="Produto" [(ngModel)]="bilhete.produto" readonly />
+          </mat-form-field>
+
+          <mat-form-field>
+            <input matInput placeholder="Data de Emissão" [(ngModel)]="bilhete.emissao" readonly />
+          </mat-form-field>
+        </div>
+
+        <div class="col-md">
+          <mat-form-field>
+            <input matInput placeholder="Data de Início" [(ngModel)]="bilhete.inicio" readonly />
+          </mat-form-field>
+
+          <mat-form-field>
+            <input matInput placeholder="Data de Término" [(ngModel)]="bilhete.termino" readonly />
+          </mat-form-field>
+
+          <mat-form-field>
+            <input matInput placeholder="Destino" [(ngModel)]="bilhete.destino" readonly />
+          </mat-form-field>
+
+          <mat-form-field>
+            <input matInput placeholder="Valor do Bilhete" [(ngModel)]="bilhete.valor" readonly />
+          </mat-form-field>
+
+          <mat-form-field>
+            <input matInput placeholder="Valor da Cotação do Dolar" [(ngModel)]="bilhete.valorDolar" readonly />
+          </mat-form-field>
+
+          <mat-form-field>
+            <input matInput placeholder="Forma de Pagamento" [(ngModel)]="bilhete.formaPgto" readonly />
+          </mat-form-field>
+
+          <mat-form-field>
+            <input matInput placeholder="Cancelamento" [(ngModel)]="bilhete.dtCancelamento" readonly />
+          </mat-form-field>
+        </div>
+      </div>
+    </div>
+  </fieldset>
+
+</div>

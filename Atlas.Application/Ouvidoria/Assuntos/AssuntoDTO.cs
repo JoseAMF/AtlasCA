@@ -8,6 +8,7 @@ namespace Atlas.Application.Ouvidoria.Assuntos
 {
     public class AssuntoDTO : IMapFrom<Assunto>
     {
+        public int? Id { get; set; }
         public int IdAssunto { get; set; }
         public string Descricao { get; set; }
     }

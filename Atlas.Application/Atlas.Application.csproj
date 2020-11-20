@@ -24,6 +24,8 @@
   <ItemGroup>
     <Folder Include="eCommerce\ComissaoAgencia\Commands\" />
     <Folder Include="eCommerce\Pareport\Commands\" />
+    <Folder Include="LGPD\Externos\Commnads\" />
+    <Folder Include="Premium\PropostaSegurado\Commands\UpdatePropostaSegurado\" />
   </ItemGroup>
 
 </Project>

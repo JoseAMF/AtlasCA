@@ -50,7 +50,6 @@ namespace Atlas.Application.eCommerce.Bilhete.Commands.CancelSale
 
             poliza.FechaAnulacion = poliza.FechaDesde;
 
-            context.PoPolizas.Update(poliza);
 
             await context.SaveChangesAsync(cancellationToken);
 

@@ -40,15 +40,8 @@ namespace Atlas.Application.Auth.UpdatePassword
             var user = await _context.Usuarios.FindAsync(request.Username);
 
             user.Password = Hash.hashPassword(request.NewPassword);
-            _context.Usuarios.Update(user);
-            try
-            {
-                await _context.SaveChangesAsync(cancellationToken);
-            }
-            catch (DbUpdateConcurrencyException)
-            {
-                throw;
-            }
+
+              await _context.SaveChangesAsync(cancellationToken);
 
             return Unit.Value;
         }

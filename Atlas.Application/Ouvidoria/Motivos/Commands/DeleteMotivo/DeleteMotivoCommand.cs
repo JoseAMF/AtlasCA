@@ -35,6 +35,8 @@ public class DeleteMotivoCommandHandler : IRequestHandler<DeleteMotivoCommand>
         var motivo = await _context.Ouvidoria_Motivos.FindAsync(request.Id);
         _context.Ouvidoria_Motivos.Remove(motivo);
 
+        await _context.SaveChangesAsync(cancellationToken);
+
         return Unit.Value;
     }
 }

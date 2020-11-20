@@ -1,4 +1,5 @@
 ﻿using Atlas.Domain.Entities.Atlas;
+using Atlas.Domain.Entities.Atlas.LGPD;
 using Atlas.Domain.Entities.Atlas.Ouvidoria;
 using Microsoft.EntityFrameworkCore;
 using System.Threading;
@@ -16,6 +17,7 @@ namespace Atlas.Application.Common.Interfaces
         DbSet<CanalVenda> Ouvidoria_CanaisVenda { get; set; }
         DbSet<Motivo> Ouvidoria_Motivos { get; set; }
         DbSet<Status> Ouvidoria_Status { get; set; }
+        DbSet<LGPDExterno> LGPDExternos { get; set; }
         Task<int> SaveChangesAsync(CancellationToken cancellationToken);
     }
 }

@@ -1,0 +1,22 @@
+.sidenav-container {
+  height: 100%;
+}
+
+.sidenav {
+  width: 200px;
+}
+
+.sidenav .mat-toolbar {
+  background: inherit;
+}
+
+.mat-toolbar.mat-primary {
+  position: sticky;
+  top: 0;
+  z-index: 1;
+}
+
+.background {
+  background: url(../../../../assets/Background/Background_Home.jpg) no-repeat center center fixed;
+  background: url(../../../../assets/Background/Background_Home.jpg) no-repeat 50% fixed;background-size:cover;height:100%;overflow:auto
+}

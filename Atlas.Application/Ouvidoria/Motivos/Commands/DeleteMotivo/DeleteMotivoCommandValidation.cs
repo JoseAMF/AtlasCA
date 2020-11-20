@@ -22,7 +22,7 @@ namespace Atlas.Application.Ouvidoria.Motivos.Commands.DeleteMotivo
 
         private async Task<bool> MotivoExistis(int id, CancellationToken cancellationToken)
         {
-            return await _context.Ouvidoria_Motivos.FindAsync(id, cancellationToken) == null ? false : true;
+            return await _context.Ouvidoria_Motivos.FindAsync(id) == null ? false : true;
         }
     }
 }

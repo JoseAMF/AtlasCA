@@ -1,0 +1,92 @@
+<mat-sidenav-container #teste class="sidenav-container" *ngIf="!isLoading" >
+
+
+  <mat-sidenav class="sidenav" mode="side" opened [disableClose]="true">
+      <mat-toolbar>
+        <a [routerLink]="['']" routerLinkActive="router-link-active"  >
+          <img src="assets/Imagens/omint-logo.jpg" alt="" width="30" height="30" />
+          <span class="mr-1">&nbsp;Atlas</span>
+      </a>
+    </mat-toolbar>
+
+      <div>
+        <mat-nav-list>
+            <mat-accordion>
+                <mat-expansion-panel style="background-color: RGB(54,54,54);" class="white-arrow" *ngIf="hasRole('Atlas_Admin')">
+                    <mat-expansion-panel-header>
+                        <mat-panel-title>
+                            Admin
+                        </mat-panel-title>
+                    </mat-expansion-panel-header>
+                    <a mat-list-item [routerLink]="['/admin/usuarios']" routerLinkActive="router-link-active">Usuários</a>
+                    <a mat-list-item [routerLink]="['/lgpd/externo']" routerLinkActive="router-link-active" *ngIf="hasRole('LGPD')">LGPD Externos</a>
+                  </mat-expansion-panel>
+                <mat-expansion-panel style="background-color: RGB(54,54,54);" class="white-arrow" *ngIf="hasRole('PREMIUM')">
+                    <mat-expansion-panel-header>
+                        <mat-panel-title>
+                            Premium
+                        </mat-panel-title>
+                    </mat-expansion-panel-header>
+                    <a mat-list-item [routerLink]="['/bilhetes']" routerLinkActive="router-link-active">Bilhetes</a>
+                </mat-expansion-panel>
+                <mat-expansion-panel style="background-color: RGB(54,54,54);" class="white-arrow" *ngIf="hasRole('Pessoa') || hasRole('Pareport') || hasRole('Cancelamento') || hasRole('Comissao') || hasRole('Cupom') || hasRole('VendaLote') || hasRole('Produto')">
+                  <mat-expansion-panel-header>
+                      <mat-panel-title>
+                          Seguro Viagem
+                      </mat-panel-title>
+              </mat-expansion-panel-header>
+                  <a mat-list-item [routerLink]="['/atualizarpreco']" routerLinkActive="router-link-active" *ngIf="hasRole('Produto')">Atualização de Preços</a>
+                  <a mat-list-item [routerLink]="['/bilhete']" routerLinkActive="router-link-active" *ngIf="hasRole('Bilhete')">Bilhete</a>
+                  <a mat-list-item [routerLink]="['/cadastropessoa']" routerLinkActive="router-link-active" *ngIf="hasRole('Pessoa')">Cadastro de Pessoa</a>
+                  <a mat-list-item [routerLink]="['/comissao']" routerLinkActive="router-link-active" *ngIf="hasRole('Comissao')">Comissão de Agência</a>
+                  <a mat-list-item [routerLink]="['/cupom']" routerLinkActive="router-link-active" *ngIf="hasRole('Cupom')">Cupom</a>
+                  <a mat-list-item [routerLink]="['/pareport']" routerLinkActive="router-link-active" *ngIf="hasRole('Pareport')">Pareport10</a>
+                  <a mat-list-item [routerLink]="['/vendaemlote']" routerLinkActive="router-link-active" *ngIf="hasRole('VendaLote')">Venda em Lote</a>
+                  <a mat-list-item [routerLink]="['/retornovendaemlote']" routerLinkActive="router-link-active" *ngIf="hasRole('VendaLote')">Retorno Venda em Lote</a>
+              </mat-expansion-panel>
+
+              <mat-expansion-panel style="background-color: RGB(54,54,54);" class="white-arrow" *ngIf="hasRole('Ouvidoria') || hasRole('COVID') || hasRole('OCR')">
+                <mat-expansion-panel-header>
+                    <mat-panel-title>
+                      Operação Regulatória
+                    </mat-panel-title>
+                  </mat-expansion-panel-header>
+                  <a mat-list-item [routerLink]="['/ocr']" routerLinkActive="router-link-active" *ngIf="hasRole('OCR')">Fiscal</a>
+
+                      <mat-expansion-panel style="background-color: RGB(54,54,54);" class="white-arrow" *ngIf="hasRole('Ouvidoria')">
+                        <mat-expansion-panel-header>
+                            <mat-panel-title>
+                                Ouvidoria
+                            </mat-panel-title>
+                        </mat-expansion-panel-header>
+                        <a mat-list-item [routerLink]="['/ouvidoria/gerarjson']" routerLinkActive="router-link-active">Gerar Arquivo</a>
+                        <a mat-list-item [routerLink]="['/ouvidoria/assuntos']" routerLinkActive="router-link-active">Assuntos</a>
+                        <a mat-list-item [routerLink]="['/ouvidoria/canaisreclamacao']" routerLinkActive="router-link-active">Canais de Reclamação</a>
+                        <a mat-list-item [routerLink]="['/ouvidoria/canaisvenda']" routerLinkActive="router-link-active">Canais de Venda</a>
+                        <a mat-list-item [routerLink]="['/ouvidoria/motivos']" routerLinkActive="router-link-active">Motivos</a>
+                    </mat-expansion-panel>
+
+                    <mat-expansion-panel style="background-color: RGB(54,54,54);" class="white-arrow" *ngIf="hasRole('COVID')">
+                        <mat-expansion-panel-header>
+                            <mat-panel-title>
+                                COVID
+                            </mat-panel-title>
+                        </mat-expansion-panel-header>
+                <a mat-list-item [routerLink]="['/covid/gerarjson']" routerLinkActive="router-link-active" >Gerar Arquivo</a>
+                <a mat-list-item [routerLink]="['/covid/controle']" routerLinkActive="router-link-active" >Gerenciar Controle</a>
+             </mat-expansion-panel>
+             </mat-expansion-panel>
+
+            </mat-accordion>
+        </mat-nav-list>
+      </div>
+      </mat-sidenav>
+      <mat-sidenav-content>
+        <!-- Add Content Here -->
+
+        <div class="background">
+          <router-outlet></router-outlet>
+        </div>
+
+  </mat-sidenav-content>
+</mat-sidenav-container>

@@ -28,8 +28,8 @@ namespace Atlas.Application.Auth.ResetPassword
             var user = await _context.Usuarios.FindAsync(request.Username);
 
             user.Password = Hash.hashPassword("AtlasOmint");
-            
-            _context.Usuarios.Update(user);
+
+            await _context.SaveChangesAsync(cancellationToken);
 
             return Unit.Value;
         }

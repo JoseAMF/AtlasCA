@@ -10,16 +10,16 @@ using System.Threading.Tasks;
 
 namespace Atlas.Application.Ouvidoria.Motivos.Commands.UpdateMotivo
 {
-    public class UpdateMotivoCommand : IRequest
+    public class UpdateMotivoCommand : IRequest<int>
     {
-        public UpdateMotivoCommand(int id, MotivoDTO motivo)
+        public UpdateMotivoCommand(MotivoDTO motivo)
         {
             Motivo = motivo;
         }
         public MotivoDTO Motivo { get; }
     }
 
-    public class UpdateMotivoCommandHandler : IRequestHandler<UpdateMotivoCommand>
+    public class UpdateMotivoCommandHandler : IRequestHandler<UpdateMotivoCommand, int>
     {
         private readonly IAtlasDbContext context;
         private readonly IMapper mapper;
@@ -29,13 +29,13 @@ namespace Atlas.Application.Ouvidoria.Motivos.Commands.UpdateMotivo
             this.context = context;
             this.mapper = mapper;
         }
-        public async Task<Unit> Handle(UpdateMotivoCommand request, CancellationToken cancellationToken)
+        public async Task<int> Handle(UpdateMotivoCommand request, CancellationToken cancellationToken)
         {
-            context.Ouvidoria_Motivos.Update(mapper.Map<Motivo>(request.Motivo));
+            var motivo = await context.Ouvidoria_Motivos.FindAsync(request.Motivo.Id);
 
-            await context.SaveChangesAsync(cancellationToken);
+            mapper.Map<MotivoDTO, Motivo>(request.Motivo, motivo);
 
-            return Unit.Value;
+            return await context.SaveChangesAsync(cancellationToken);
         }
     }
 }

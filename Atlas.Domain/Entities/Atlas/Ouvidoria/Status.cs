@@ -6,6 +6,7 @@ namespace Atlas.Domain.Entities.Atlas.Ouvidoria
 {
     public class Status : AuditableEntity
     {
+        public int Id { get; set; }
         public int IdStatus { get; set; }
         public string Descricao { get; set; }
     }

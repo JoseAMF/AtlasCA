@@ -1,0 +1,32 @@
+<app-header [title]="'Ouvidoria - Assuntos'"></app-header>
+
+<app-loading-spinner [isLoading]="isLoading"></app-loading-spinner>
+
+<div class="container">
+  <button mat-raised-button [routerLink]="['new']" routerLinkActive="router-link-active"  class="mb-3">
+    Novo
+  </button>
+  <table class="table table-hover">
+    <thead>
+      <tr class="bg-dark text-light">
+        <th>Id Assunto</th>
+        <th>Descrição</th>
+        <th class="text-center">Ações</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let assuntos of resources">
+        <td>
+          <strong>{{assuntos.idAssunto}}</strong>
+        </td>
+        <td>
+          <small>{{assuntos.descricao}}</small>
+        </td>
+        <td class="text-center">
+          <a [routerLink]="[assuntos.id]" class="btn btn-outline-light btn mr-2">Editar</a>
+          <button (click)="deleteResource(assuntos)" class="btn btn-outline-danger btn">Excluir</button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>

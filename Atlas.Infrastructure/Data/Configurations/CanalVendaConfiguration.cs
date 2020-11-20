@@ -7,9 +7,9 @@ using System.Text;
 
 namespace Atlas.Infrastructure.Data.Configurations
 {
-    public class CanalVendaConfiguration : IEntityTypeConfiguration<CanalReclamacao>
+    public class CanalVendaConfiguration : IEntityTypeConfiguration<CanalVenda>
     {
-        public void Configure(EntityTypeBuilder<CanalReclamacao> builder)
+        public void Configure(EntityTypeBuilder<CanalVenda> builder)
         {
             builder.HasKey(a => a.Id);
 

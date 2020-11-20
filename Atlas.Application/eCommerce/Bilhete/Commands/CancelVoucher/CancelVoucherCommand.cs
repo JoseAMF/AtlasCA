@@ -39,10 +39,8 @@ namespace Atlas.Application.eCommerce.Bilhete.Commands.CancelVoucher
             var bilhete = context.PoBeneficiariosPoliza.Where(x => x.IdPoliza == poliza.IdPoliza && x.Secuencia == int.Parse(passageiro)).FirstOrDefault();
 
             bilhete.FechaAnulacion = poliza.FechaDesde;
-            context.PoBeneficiariosPoliza.Update(bilhete);
 
             poliza.FechaAnulacion = poliza.FechaDesde;
-            context.PoPolizas.Update(poliza);
 
             await context.SaveChangesAsync(cancellationToken);
 

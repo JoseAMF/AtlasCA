@@ -8,6 +8,7 @@ namespace Atlas.Application.Ouvidoria.Motivos
 {
     public class MotivoDTO : IMapFrom<Motivo>
     {
+        public int? Id { get; set; }
         public int IdMotivo { get; set; }
         public string Descricao { get; set; }
     }

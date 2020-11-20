@@ -1,0 +1,89 @@
+/* You can add global styles to this file, and also import other style files */
+
+html,
+body {
+    height: 100%;
+}
+
+body {
+    margin: 0;
+    font-family: Roboto, "Helvetica Neue", sans-serif;
+}
+
+label {
+    color: white;
+}
+
+.container {
+    margin-top: 3%;
+}
+
+span,
+.mat-list-item {
+    color: white;
+}
+
+.mat-toolbar {
+    background-color: rgba(9, 17, 66, .5);
+}
+
+.mat-toolbar button + button{
+  margin-left: 1rem;
+}
+
+.spacer {
+  flex: 1 1 auto;
+}
+
+.bordered {
+  border: solid .5px;
+  padding-top: 10px ;
+}
+
+mat-form-field {
+  width: 80%;
+}
+
+.container {
+  background-color: rgba(54, 54, 54, .9);
+  padding-left: 5vh ;
+  padding-right: 5vh;
+
+  padding-top: 5vh ;
+  padding-bottom: 10vh;
+}
+
+form .container{
+  background-color: rgba(54, 54, 54, .9);
+
+  margin: 0 auto;
+  display: inline-block;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.mat-dialog-container {
+  padding:0px!important;
+}
+
+.spinner-form {
+  margin: 0 auto;
+  display: inline-block;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.bilheteForm {
+  background-color: rgba(54, 54, 54, .8);
+  padding: 3vh;
+  margin: 0 auto;
+  display: inline-block;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}

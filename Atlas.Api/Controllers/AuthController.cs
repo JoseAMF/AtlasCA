@@ -1,6 +1,8 @@
 ﻿using Application.Auth.ListRoles;
 using Application.Auth.ListUsers;
 using Application.Auth.Register;
+using Atlas.Application.Auth;
+using Atlas.Application.Auth.GetUserRoles;
 using Atlas.Application.Auth.Login;
 using Atlas.Application.Auth.ResetPassword;
 using Atlas.Application.Auth.UpdatePassword;
@@ -22,9 +24,16 @@ namespace Atlas.Api.Controllers
 
         [HttpGet]
         [Route("ListRoles")]
-        public async Task<ActionResult<List<string>>> ListRoles()
+        public async Task<ActionResult<List<PermissionDTO>>> ListRoles()
         {
             return await Mediator.Send(new ListRolesQuery());
+        }
+
+        [HttpGet]
+        [Route("GetUserRoles/{username}")]
+        public async Task<ActionResult<List<PermissionDTO>>> GetUserRoles(string username)
+        {
+            return await Mediator.Send(new GetUserRolesQuery(username));
         }
 
         [HttpGet]
@@ -44,9 +53,9 @@ namespace Atlas.Api.Controllers
 
         [HttpPost]
         [Route("Login")]
-        public async Task<ActionResult> Login(LoginCommand login)
+        public async Task<ActionResult<string>> Login(LoginCommand login)
         {
-            return Ok(new {token = await Mediator.Send(login) });
+            return Ok( await Mediator.Send(login) );
         }
 
         [HttpPost]

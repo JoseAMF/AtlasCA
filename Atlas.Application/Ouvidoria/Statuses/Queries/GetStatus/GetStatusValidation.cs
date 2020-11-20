@@ -23,7 +23,7 @@ namespace Atlas.Application.Ouvidoria.Statuses.Queries.GetStatus
 
         private async Task<bool> StatusExists(int id, CancellationToken cancellationToken)
         {
-            return await context.Ouvidoria_Status.FindAsync(id, cancellationToken) == null ? false : true;
+            return await context.Ouvidoria_Status.FindAsync(id) == null ? false : true;
         }
     }
 }

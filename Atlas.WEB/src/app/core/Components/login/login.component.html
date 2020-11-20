@@ -1,0 +1,61 @@
+<body>
+  <div class="spinner-form" *ngIf="isLoading" style="padding: 3vw;">
+    <mat-spinner></mat-spinner>
+  </div>
+    <div class="login-wrap" *ngIf="!isLoading">
+      <div class="alert alert-danger mb-0" *ngIf="error">
+        <p style="text-align: center;">{{ error }}</p>
+      </div>
+        <div class="login-html" >
+            <h2 class="mb-5" style="color: white; text-align: center;">OMINT SEGUROS</h2>
+          <input id="tab-1" type="radio" name="tab" class="sign-in" checked><label for="tab-1" class="tab">Sign In</label>
+          <input id="tab-2" type="radio" name="tab" class="sign-up"><label for="tab-2" class="tab">Sign Up</label>
+          <div class="login-form" >
+            <form class="sign-in-htm" ngForm #loginForm="ngForm"  (ngSubmit)="onLogin(loginForm)">
+              <div class="group">
+                <label for="user" class="label">Username</label>
+                <input id="user" name="user" type="text" class="input" ngModel required>
+              </div>
+              <div class="group">
+                <label for="pass" class="label">Password</label>
+                <input id="pass" name="pass" type="password" class="input" data-type="password" ngModel required>
+              </div>
+              <div class="group">
+                <input id="check" name="check" type="checkbox" class="check" checked>
+                <!-- <label for="check"><span class="icon"></span> Mantenha-me conectado</label> -->
+              </div>
+              <div class="group">
+                <input type="submit" class="button" value="Conectar">
+              </div>
+              <div class="hr"></div>
+              <div class="foot-lnk">
+                <!-- <a href="#forgot">Esqueceu a senha?</a> -->
+              </div>
+            </form>
+            <form class="sign-up-htm"  ngForm #singUpForm="ngForm" (ngSubmit)="onRegister(singUpForm)">
+              <div class="group">
+                <label for="user" class="label">Username</label>
+                <input id="userReg" name="user" type="text" class="input" ngModel required>
+              </div>
+              <div class="group">
+                <label for="pass" class="label">Senha</label>
+                <input id="passReg" name="pass" type="password" class="input" data-type="password" ngModel required>
+              </div>
+              <div class="group">
+                <label for="pass2" class="label">Confirmação da Senha</label>
+                <input id="pass2" name="pass2" type="password" class="input" data-type="password" ngModel required >
+              </div>
+              <div class="group">
+                <label for="email" class="label" required>Email</label>
+                <input id="email" name="email" type="text" class="input" ngModel required>
+              </div>
+              <div class="group">
+                <input type="submit" class="button" value="Registrar">
+              </div>
+              <div class="hr"></div>
+            </form>
+          </div>
+        </div>
+      </div>
+
+</body>

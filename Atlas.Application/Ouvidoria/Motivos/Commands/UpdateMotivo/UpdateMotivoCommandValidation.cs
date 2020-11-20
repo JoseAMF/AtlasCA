@@ -22,14 +22,15 @@ namespace Atlas.Application.Ouvidoria.Motivos.Commands.UpdateMotivo
             RuleFor(m => m.Motivo.Descricao)
                 .NotEmpty();
 
-            RuleFor(m => m.Motivo.IdMotivo)
+            RuleFor(m => m.Motivo.Id)
                 .NotEmpty()
                 .MustAsync(MotivoExistis).WithMessage("Motivo não encontrado.");
         }
 
-        private async Task<bool> MotivoExistis(int id, CancellationToken cancellationToken)
+        private async Task<bool> MotivoExistis(int? id, CancellationToken cancellationToken)
         {
-            return await context.Ouvidoria_Motivos.FindAsync(id, cancellationToken) == null ? false : true;
+            if (!id.HasValue) return false;
+            return await context.Ouvidoria_Motivos.FindAsync(id) == null ? false : true;
         }
     }
 }
